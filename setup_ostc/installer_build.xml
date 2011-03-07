@@ -103,6 +103,7 @@
         <sequential>
         	<echo message="${basedir}" />
 			<exec failonerror="true" executable="${basedir}/genUpdate.bat" dir="${basedir}">
+				<arg file="${basedir}"/>
 				<arg file="@{file}"/>
 				<arg value="@{version}"/>
 			</exec>
