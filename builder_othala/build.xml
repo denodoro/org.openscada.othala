@@ -21,7 +21,7 @@
 	<property file="common/config/local.properties"/>
 	<property file="common/config/build.properties"/>
 	
-	<property name="buildId" value="${atlantis.version}"/>
+	<property name="buildId" value="${othala.version}"/>
 	<property name="buildLabel" value="${buildType}.${buildId}"/>
 	
 	<import file="${build.root}/common/lib/lib.xml" />
@@ -35,7 +35,7 @@
 	<!-- ================================= 
           target: build              
          ================================= -->
-    <target name="build" depends="populate" description="OpenSCADA Orilla">
+    <target name="build" depends="populate" description="OpenSCADA Othala">
     	<openscada.productBuild builder="builder"/>
     </target>
 
@@ -49,7 +49,7 @@
           target: publish              
          ================================= -->
     <target name="publish" depends="" description="Publish artifacts">
-    	<openscada.publish.product project="orilla" name="ostc" builder="builder"/>
+    	<openscada.publish.product project="othala" name="ostc" builder="builder"/>
     </target>
 	
 	<!-- ================================= 

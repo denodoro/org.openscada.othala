@@ -109,23 +109,17 @@
   <target name="postSetup">
     <antcall target="getBaseComponents" />
   	
+  	<openscada.builder.copyFeature id="org.openscada.othala"/>
+  	<openscada.builder.copyFeature id="org.openscada.othala.sdk"/>
+  	
   	<openscada.builder.copyFeature id="org.openscada.core.client.test"/>
   	<openscada.builder.copyFeature id="org.openscada.ca.client.test"/>
   	<openscada.builder.copyFeature id="org.openscada.da.client.test"/>
 	<openscada.builder.copyFeature id="org.openscada.ae.client.test"/>
 	<openscada.builder.copyFeature id="org.openscada.hd.client.test"/>
   	
-  	<openscada.builder.copyPlugin id="org.openscada.da.net.client"/>
-  	
-  	<!-- OpenSCADA DA Test Servers -->
-  	
-  	<openscada.builder.copyFeature id="org.openscada.da.rcp.LocalTestServer" />
   	<openscada.builder.copyPlugin id="org.openscada.da.rcp.LocalTestServer"/>
-  	
-  	<!-- OpenSCADA RCP -->
-  	
-  	<openscada.builder.copyFeature id="org.openscada.rcp.client" />
-  	<openscada.builder.copyPlugin id="org.openscada.rcp.client"/>
+  	<openscada.builder.copyPlugin id="org.openscada.othala.application"/>
   </target>
 
   <!-- ===================================================================== -->
