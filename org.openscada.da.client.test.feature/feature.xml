@@ -2,7 +2,7 @@
 <feature
       id="org.openscada.da.client.test"
       label="OpenSCADA DA Test Client Feature"
-      version="0.15.0.qualifier"
+      version="0.17.0.qualifier"
       provider-name="TH4 SYSTEMS GmbH"
       plugin="org.openscada.da.ui">
 
@@ -418,13 +418,6 @@ Library.
 
    <plugin
          id="org.openscada.da.net"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.openscada.da.net.client"
          download-size="0"
          install-size="0"
          version="0.0.0"
