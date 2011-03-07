@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         name="OpenSCADA Admin Client"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            icon="icons/app/openscada.ico">
+         <run
+               class="org.openscada.rcp.client.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+X">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="%perspective.clientApp.name"
+            class="org.openscada.rcp.client.Perspective"
+            id="org.openscada.rcp.client.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.openscada.rcp.client.application"
+            name="OpenSCADA Admin Client">
+         <property
+               name="aboutImage"
+               value="branding/about.png"/>
+         <property
+               name="aboutText"
+               value="%aboutText"/>
+         <property
+               name="windowImages"
+               value="icons/app/Sign_open-Scada_16px.png,icons/app/Sign_open-Scada_32px.png,icons/app/Sign_open-Scada_48px.png,icons/app/Sign_open-Scada_64px.png,icons/app/Sign_open-Scada_128px.png"/>
+               <property
+               name="introTitle"
+               value="Welcome to the OpenSCADA RCP Client"/>
+         <property
+               name="introBrandingImage"
+               value="product:branding/about.png"/>
+         <property
+       	       name="introBrandingImageText"
+               value="OpenSCADA Project"/>
+         <property
+               name="appName"
+               value="OpenSCADA Admin Client">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="FFFFFF">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="18,30,264,49">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,0,455,12">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <perspectiveShortcut
+               id="org.openscada.rcp.client.perspective">
+         </perspectiveShortcut>
+      </perspectiveExtension>
+   </extension>
+<extension
+	point="org.eclipse.ui.intro">
+   <introProductBinding
+      introId="org.eclipse.ui.intro.universal"
+      productId="org.openscada.rcp.client.product"/>
+</extension>
+
+<extension
+         point="org.eclipse.ui.intro.configExtension">
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig" 
+            content="intro/overviewExtensionContent.xml"/>  
+      <configExtension
+            configId="org.eclipse.ui.intro.universalConfig" 
+            content="intro/whatsNewExtensionContent.xml"/>  
+   </extension>
+
+</plugin>
