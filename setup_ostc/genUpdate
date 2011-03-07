@@ -1,0 +1,24 @@
+#!/bin/bash
+
+basename="`basename "$1"`"
+updatename="`echo $1 | sed -e 's/\.msi$//' `".update.txt
+version="$2"
+
+echo "UpdateName: $updatename"
+
+cat <<EOF > "$updatename"
+[$version]
+Name=OpenSCADA Admin Client - $version
+URL=http://download.openscada.org/ostc/R/${version}/ostc_$version_win32.win32.x86.msi
+Size=`stat -c "%s" "$1"`
+ReleaseDate=`date -r "$1" +DD/MM/YYYY`
+MD5=`md5sum "$1" | sed -e 's/ .*$//'`
+ServerFileName=$basename
+Flags=SilentInstall
+AutoCloseApplication=[APPDIR]ostc.exe
+RegistryKey=HKLM\\SOFTWARE\\TH4 SYSTEMS GmbH\\${version}\\Version
+Version=${version}
+Replaces=All
+EOF
+
+cat "$updatename"

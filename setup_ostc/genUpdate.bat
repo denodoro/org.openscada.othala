@@ -1,0 +1,1 @@
+c:\cygwin\bin\bash -c "./genUpdate %1 %2"  

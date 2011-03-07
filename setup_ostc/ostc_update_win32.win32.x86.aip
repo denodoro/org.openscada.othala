@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="7.2.1" version="8.0.2" Modules="update" RootPath="." Language="en">
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;aiu-ue.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;aiu-ue_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.UpdaterEditorComponent">
+    <ROW Section="Update 0.14.0.4" Key="Name" Value="OpenSCADA Admin Client - 0.14.0.4"/>
+    <ROW Section="Update 0.14.0.4" Key="URL" Value="http://download.openscada.org/ostc/R/0.14.0.4/ostc_0.14.0.4_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.14.0.4" Key="Size" Value="updates\ostc_0.14.0.4_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.14.0.4" Key="ReleaseDate" Value="15183"/>
+    <ROW Section="Update 0.14.0.4" Key="MD5" Value="updates\ostc_0.14.0.4_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.14.0.4" Key="ServerFileName" Value="ostc_0.14.0.4_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.14.0.4" Key="Flags" Value="SilentInstall"/>
+    <ROW Section="Update 0.14.0.4" Key="RegistryKey" Value="HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{80223981-0C19-44E1-BA7A-EBF7F516816B}\DisplayVersion"/>
+    <ROW Section="Update 0.14.0.4" Key="Version" Value="0.14.0.4"/>
+    <ROW Section="Update 0.14.0.4" Key="Description" Value="Initial release of the MSI based installer."/>
+    <ROW Section="Update 0.14.0.4" Key="AutoCloseApplication" Value="[APPDIR]ostc.exe"/>
+    <ROW Section="Update 0.15.0.9" Key="Name" Value="OpenSCADA Admin Client - 0.15.0.9"/>
+    <ROW Section="Update 0.15.0.9" Key="URL" Value="http://download.openscada.org/ostc/R/0.15.0.2010-10-12_10-31-47/ostc_0.15.0.9_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.15.0.9" Key="Size" Value="updates\ostc_0.15.0.9_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.15.0.9" Key="ReleaseDate" Value="15692"/>
+    <ROW Section="Update 0.15.0.9" Key="MD5" Value="updates\ostc_0.15.0.9_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.15.0.9" Key="ServerFileName" Value="ostc_0.15.0.9_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.15.0.9" Key="Flags" Value="SilentInstall"/>
+    <ROW Section="Update 0.15.0.9" Key="RegistryKey" Value="HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{510E9BCE-ABF5-4293-8550-1619D846A855}\DisplayVersion"/>
+    <ROW Section="Update 0.15.0.9" Key="Version" Value="0.15.0.9"/>
+    <ROW Section="Update 0.15.0.9" Key="Description" Value="Update to OpenSCADA Release 0.15.0"/>
+    <ROW Section="Update 0.15.0.9" Key="AutoCloseApplication" Value="[APPDIR]ostc.exe"/>
+    <ROW Section="Update 0.15.0.9" Key="Replaces" Value="Update 0.14.0.4"/>
+    <ROW Section="Update 0.16.0.27" Key="Name" Value="OpenSCADA Administration Client - 0.16.0.27"/>
+    <ROW Section="Update 0.16.0.27" Key="URL" Value="http://download.openscada.org/ostc/R/0.16.0.2011-03-04_16-39-43/ostc_0.16.0.27_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.16.0.27" Key="Size" Value="updates\ostc_0.16.0.27_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.16.0.27" Key="ReleaseDate" Value="15692"/>
+    <ROW Section="Update 0.16.0.27" Key="MD5" Value="updates\ostc_0.16.0.27_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.16.0.27" Key="ServerFileName" Value="ostc_0.16.0.27_win32.win32.x86.msi"/>
+    <ROW Section="Update 0.16.0.27" Key="Flags" Value="SilentInstall"/>
+    <ROW Section="Update 0.16.0.27" Key="RegistryKey" Value="HKLM\SOFTWARE\TH4 SYSTEMS GmbH\OpenSCADA Administration Client\0.16.0.27\Version"/>
+    <ROW Section="Update 0.16.0.27" Key="Version" Value="0.16.0.27"/>
+    <ROW Section="Update 0.16.0.27" Key="Replaces" Value="Update 0.14.0.4;Update 0.15.0.9"/>
+    <ATTRIBUTE name="OutputFileName" value="ostc_updates.win32.win32.x86.txt"/>
+    <ATTRIBUTE name="OutputFolder" value="."/>
+  </COMPONENT>
+</DOCUMENT>
