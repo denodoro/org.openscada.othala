@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <introContent>
 
-  <extensionContent id="org.openscada.rcp.client.whatsnew" name="ostc"
+  <extensionContent id="org.openscada.othala.application.whatsnew" name="ostc"
     alt-style="css/swt.properties" style="css/whatsnew.css"
     path="whatsnew/@">
     <group style-id="content-group" id="content-group">

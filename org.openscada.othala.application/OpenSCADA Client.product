@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="OpenSCADA Admin Client" uid="org.openscada.testclient" id="org.openscada.rcp.client.product" application="org.openscada.rcp.client.application" version="0.16.0" useFeatures="true" includeLaunchers="true">
+<product name="OpenSCADA Admin Client" uid="org.openscada.othala.app" id="org.openscada.othala.application.product" application="org.openscada.othala.application.application" version="0.17.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="branding/about.png"/>
@@ -18,19 +18,19 @@
 -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
    </launcherArgs>
 
-   <windowImages i16="/org.openscada.rcp.client/icons/app/Sign_open-Scada_16px.png" i32="/org.openscada.rcp.client/icons/app/Sign_open-Scada_32px.png" i48="/org.openscada.rcp.client/icons/app/Sign_open-Scada_48px.png" i64="/org.openscada.rcp.client/icons/app/Sign_open-Scada_64px.png" i128="/org.openscada.rcp.client/icons/app/Sign_open-Scada_128px.png"/>
+   <windowImages i16="/org.openscada.othala.application/icons/app/Sign_open-Scada_16px.png" i32="/org.openscada.othala.application/icons/app/Sign_open-Scada_32px.png" i48="/org.openscada.othala.application/icons/app/Sign_open-Scada_48px.png" i64="/org.openscada.othala.application/icons/app/Sign_open-Scada_64px.png" i128="/org.openscada.othala.application/icons/app/Sign_open-Scada_128px.png"/>
 
    <splash
-      location="org.openscada.rcp.client"
+      location="org.openscada.othala.application"
       startupProgressRect="0,0,455,12"
       startupMessageRect="18,30,264,49"
       startupForegroundColor="FFFFFF" />
    <launcher name="ostc">
-      <linux icon="/org.openscada.rcp.client/icons/app/openscada_128px.xpm"/>
-      <macosx icon="/org.openscada.rcp.client/icons/app/app_icon.icns"/>
+      <linux icon="/org.openscada.othala.application/icons/app/openscada_128px.xpm"/>
+      <macosx icon="/org.openscada.othala.application/icons/app/app_icon.icns"/>
       <solaris/>
       <win useIco="true">
-         <ico path="/org.openscada.rcp.client/icons/app/openscada.ico"/>
+         <ico path="/org.openscada.othala.application/icons/app/openscada.ico"/>
          <bmp/>
       </win>
    </launcher>
@@ -44,13 +44,7 @@
    </plugins>
 
    <features>
-      <feature id="org.openscada.core.client.test" version="0.15.0.qualifier"/>
-      <feature id="org.openscada.da.client.test" version="0.15.0.qualifier"/>
-      <feature id="org.openscada.hd.client.test" version="0.15.0.qualifier"/>
-      <feature id="org.openscada.ae.client.test" version="0.15.0.qualifier"/>
-      <feature id="org.openscada.da.rcp.LocalTestServer" version="0.15.0.qualifier"/>
-      <feature id="org.openscada.ca.client.test" version="0.16.0.qualifier"/>
-      <feature id="org.openscada.rcp.client" version="0.16.0.qualifier"/>
+      <feature id="org.openscada.othala" version="0.17.0.qualifier"/>
    </features>
 
 

@@ -17,10 +17,45 @@
       %license
    </license>
 
+   <includes
+         id="org.openscada.core.client.test"
+         version="0.0.0"/>
+
+   <includes
+         id="org.openscada.ae.client.test"
+         version="0.0.0"/>
+
+   <includes
+         id="org.openscada.ca.client.test"
+         version="0.0.0"/>
+
+   <includes
+         id="org.openscada.da.client.test"
+         version="0.0.0"/>
+
+   <includes
+         id="org.openscada.hd.client.test"
+         version="0.0.0"/>
+
    <requires>
-      <import feature="org.openscada.atlantis" version="0.15.0.qualifier"/>
+      <import feature="org.openscada.atlantis" version="0.17.0.qualifier"/>
       <import plugin="org.eclipse.draw2d"/>
-      <import feature="org.openscada.external" version="0.16.0.qualifier"/>
+      <import feature="org.openscada.external" version="0.17.0.qualifier"/>
+      <import feature="org.openscada.orilla" version="0.17.0.qualifier"/>
    </requires>
+
+   <plugin
+         id="org.openscada.da.rcp.LocalTestServer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.openscada.rcp.client"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>

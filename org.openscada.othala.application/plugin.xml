@@ -9,7 +9,7 @@
       <application
             icon="icons/app/openscada.ico">
          <run
-               class="org.openscada.rcp.client.Application">
+               class="org.openscada.othala.application.Application">
          </run>
       </application>
    </extension>
@@ -25,7 +25,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="%perspective.clientApp.name"
-            class="org.openscada.rcp.client.Perspective"
+            class="org.openscada.othala.application.Perspective"
             id="org.openscada.rcp.client.perspective">
       </perspective>
    </extension>
@@ -88,7 +88,7 @@
 	point="org.eclipse.ui.intro">
    <introProductBinding
       introId="org.eclipse.ui.intro.universal"
-      productId="org.openscada.rcp.client.product"/>
+      productId="org.openscada.othala.application.product"/>
 </extension>
 
 <extension

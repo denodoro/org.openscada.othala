@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <introContent>
 <!-- 
-  <extensionContent id="org.openscada.rcp.client" name="Client" alt-style="css/swt.properties" style="css/overview.css" path="overview/@">
+  <extensionContent id="org.openscada.othala.application" name="Client" alt-style="css/swt.properties" style="css/overview.css" path="overview/@">
     <group style-id="content-group" id="content-group">
       <link style-id="content-link" label="OpenSCADA Client Usage" url="http://org.eclipse.ui.intro/showPage?id=extraOverview"  id="ostc">
           <text>Learn how to use the OpenSCADA RCP Client</text>
@@ -21,7 +21,7 @@
    </page>
   </extensionContent>-->
   
-  <extensionContent id="org.openscada.rcp.client" name="ostc"
+  <extensionContent id="org.openscada.othala.application" name="ostc"
     alt-style="css/swt.properties" style="css/overview.css"
     path="overview/@">
     <group style-id="content-group" id="content-group">

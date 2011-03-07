@@ -17,7 +17,7 @@
  * <http://opensource.org/licenses/lgpl-3.0.html> for a copy of the LGPLv3 License.
  */
 
-package org.openscada.rcp.client;
+package org.openscada.othala.application;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -30,7 +30,7 @@ public class Activator extends AbstractUIPlugin
 {
 
     // The plug-in ID
-    public static final String PLUGIN_ID = "org.openscada.rcp.client"; //$NON-NLS-1$
+    public static final String PLUGIN_ID = "org.openscada.othala.application"; //$NON-NLS-1$
 
     // The shared instance
     private static Activator plugin;

@@ -17,7 +17,7 @@
  * <http://opensource.org/licenses/lgpl-3.0.html> for a copy of the LGPLv3 License.
  */
 
-package org.openscada.rcp.client;
+package org.openscada.othala.application;
 
 import org.eclipse.ui.application.IWorkbenchConfigurer;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
@@ -27,7 +27,7 @@ import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor
 {
 
-    private static final String PERSPECTIVE_ID = "org.openscada.rcp.client.perspective"; //$NON-NLS-1$
+    private static final String PERSPECTIVE_ID = "org.openscada.othala.application.perspective"; //$NON-NLS-1$
 
     @Override
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor ( final IWorkbenchWindowConfigurer configurer )
