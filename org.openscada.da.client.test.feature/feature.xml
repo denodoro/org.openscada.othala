@@ -7,8 +7,7 @@
       plugin="org.openscada.da.ui">
 
    <description url="http://openscada.org">
-      &lt;p&gt;
-The OpenSCADA DA Client Test Feature&lt;/p&gt;
+      The OpenSCADA DA Client Test Feature
    </description>
 
    <copyright url="http://opensource.org/licenses/lgpl-3.0.html">
