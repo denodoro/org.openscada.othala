@@ -52,7 +52,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.openscada.rcp.client"
+         id="org.openscada.othala.application"
          download-size="0"
          install-size="0"
          version="0.0.0"
