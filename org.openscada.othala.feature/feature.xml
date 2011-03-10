@@ -38,10 +38,11 @@
          version="0.0.0"/>
 
    <requires>
-      <import feature="org.openscada.atlantis" version="0.17.0.qualifier"/>
+      <import feature="org.openscada.atlantis"/>
       <import plugin="org.eclipse.draw2d"/>
-      <import feature="org.openscada.external" version="0.17.0.qualifier"/>
-      <import feature="org.openscada.orilla" version="0.17.0.qualifier"/>
+      <import feature="org.openscada.external"/>
+      <import feature="org.openscada.orilla"/>
+      <import plugin="org.eclipse.rcp"/>
    </requires>
 
    <plugin
