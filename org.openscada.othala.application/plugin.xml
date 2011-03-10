@@ -33,7 +33,7 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.openscada.rcp.client.application"
+            application="org.openscada.othala.application.application"
             name="OpenSCADA Admin Client">
          <property
                name="aboutImage"
