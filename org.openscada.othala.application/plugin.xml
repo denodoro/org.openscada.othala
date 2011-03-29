@@ -26,7 +26,7 @@
       <perspective
             name="%perspective.clientApp.name"
             class="org.openscada.othala.application.Perspective"
-            id="org.openscada.rcp.client.perspective">
+            id="org.openscada.othala.application.perspective">
       </perspective>
    </extension>
    <extension
@@ -80,7 +80,7 @@
       <perspectiveExtension
             targetID="*">
          <perspectiveShortcut
-               id="org.openscada.rcp.client.perspective">
+               id="org.openscada.othala.application.perspective">
          </perspectiveShortcut>
       </perspectiveExtension>
    </extension>

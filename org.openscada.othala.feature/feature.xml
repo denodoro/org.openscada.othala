@@ -37,6 +37,10 @@
          id="org.openscada.hd.client.test"
          version="0.0.0"/>
 
+   <includes
+         id="org.eclipse.rcp"
+         version="0.0.0"/>
+
    <requires>
       <import feature="org.openscada.atlantis"/>
       <import plugin="org.eclipse.draw2d"/>
@@ -54,6 +58,13 @@
 
    <plugin
          id="org.openscada.othala.application"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.draw2d"
          download-size="0"
          install-size="0"
          version="0.0.0"
