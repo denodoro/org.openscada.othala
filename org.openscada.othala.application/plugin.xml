@@ -100,5 +100,12 @@
             configId="org.eclipse.ui.intro.universalConfig" 
             content="intro/whatsNewExtensionContent.xml"/>  
    </extension>
+<extension
+      point="org.eclipse.ui.menus">
+   <menuContribution
+         allPopups="false"
+         locationURI="menu:file">
+   </menuContribution>
+</extension>
 
 </plugin>

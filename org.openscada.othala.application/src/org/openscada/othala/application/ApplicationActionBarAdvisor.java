@@ -32,8 +32,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.ui.IWorkbenchActionConstants;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.actions.ActionFactory;
-import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.actions.ActionFactory.IWorkbenchAction;
+import org.eclipse.ui.actions.ContributionItemFactory;
 import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 
@@ -81,6 +81,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor
         register ( ActionFactory.NEW_WIZARD_DROP_DOWN.create ( window ) );
         register ( ActionFactory.NEW.create ( window ) );
         register ( ActionFactory.INTRO.create ( window ) );
+        register ( ActionFactory.SAVE.create ( window ) );
 
         this.showViews = ContributionItemFactory.VIEWS_SHORTLIST.create ( window );
         this.newWizards = ContributionItemFactory.NEW_WIZARD_SHORTLIST.create ( window );
@@ -109,6 +110,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor
         fileMenu.add ( this.newWindowAction );
         fileMenu.add ( new Separator () );
         fileMenu.add ( fileNewMenu );
+        fileMenu.add ( getAction ( ActionFactory.SAVE.getId () ) );
         fileMenu.add ( getAction ( ActionFactory.NEW_EDITOR.getId () ) );
         fileMenu.add ( new GroupMarker ( IWorkbenchActionConstants.OPEN_EXT ) );
 
