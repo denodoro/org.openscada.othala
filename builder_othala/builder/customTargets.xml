@@ -83,7 +83,7 @@
 		<openscada.import.repository id="org.openscada.orilla.sdk" version="${orilla.version}"/>
 		<openscada.import.repository id="org.openscada.oxygen.sdk" version="${oxygen.version}"/>
 		
-		<openscada.import.externalRepository file="GEF-Update-3.6.1.zip" />
+		<openscada.import.externalRepository file="GEF-Update-3.7.0.zip" />
 		<openscada.import.externalRepository file="org.eclipse.ecf.sdk_3.2.0.v20100219-1253.zip" />
 	</target>
 
