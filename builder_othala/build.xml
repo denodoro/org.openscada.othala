@@ -48,7 +48,7 @@
 	<!-- ================================= 
           target: publish              
          ================================= -->
-    <target name="publish" depends="" description="Publish artifacts">
+    <target name="publish" depends="" description="Publish artifacts" unless="skipPublish">
     	<openscada.publish.product project="othala" name="ostc" builder="builder"/>
     </target>
 	
