@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="OpenSCADA Admin Client" uid="org.openscada.othala.app" id="org.openscada.othala.application.product" application="org.openscada.othala.application.application" version="0.17.0" useFeatures="true" includeLaunchers="true">
+<product name="openSCADA Admin Client" uid="org.openscada.othala.app" id="org.openscada.othala.application.product" application="org.openscada.othala.application.application" version="0.17.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="branding/about.png"/>
