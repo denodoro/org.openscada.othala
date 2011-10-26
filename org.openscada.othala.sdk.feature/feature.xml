@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.openscada.othala.sdk"
-      label="OpenSCADA Othala SDK"
+      label="openSCADA Othala SDK"
       version="0.17.0.qualifier"
       provider-name="TH4 SYSTEMS GmbH">
 
    <description>
-      OpenSCADA Administration Client (SDK)
+      openSCADA Administration Client (SDK)
    </description>
 
    <copyright url="http://opensource.org/licenses/lgpl-3.0.html">
