@@ -2,7 +2,7 @@
 <feature
       id="org.openscada.core.client.test"
       label="OpenSCADA Core Test Client Feature"
-      version="0.15.0.qualifier"
+      version="0.17.0.qualifier"
       provider-name="TH4 SYSTEMS GmbH"
       plugin="org.openscada.core.ui">
 
@@ -204,7 +204,6 @@ Library.
    <requires>
       <import plugin="org.openscada.utils"/>
       <import plugin="slf4j.api"/>
-      <import plugin="com.springsource.org.apache.log4j"/>
       <import plugin="org.apache.mina.core"/>
       <import plugin="org.openscada.net"/>
       <import plugin="org.openscada.utils.osgi"/>

@@ -2,7 +2,7 @@
 <feature
       id="org.openscada.hd.client.test"
       label="OpenSCADA HD Test Feature"
-      version="0.15.0.qualifier"
+      version="0.17.0.qualifier"
       provider-name="TH4 SYSTEMS GmbH"
       plugin="org.openscada.hd.ui">
 
