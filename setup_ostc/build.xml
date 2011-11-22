@@ -46,7 +46,7 @@
         	</fileset>
     	</copy>
     	
-    	<echo message="${version}" output="${output.dir}/version.properties" append="fale"/>
+    	<echo message="version=${version}" output="${output.dir}/version.properties" append="fale"/>
     </target>
 
 	
