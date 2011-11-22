@@ -37,7 +37,7 @@
           target: deploy              
          ================================= -->
     <target name="deploy">
-    	<delete dir="${output.dir}"/>
+    	<delete dir="${output.dir}" failonerror="false"/>
     	<mkdir dir="${output.dir}"/>
     	
         <copy todir="${output.dir}">
@@ -48,7 +48,6 @@
     	
     	<echo message="version=${version}" output="${output.dir}/version.properties" append="fale"/>
     </target>
-
 	
 	<!-- ================================= 
           target: download              
@@ -72,6 +71,10 @@
     <target name="clean" depends="" description="Clean up">
     	<delete dir="download" failonerror="false"/>
         <delete dir="unpack" failonerror="false"/>
+    	
+    	<delete dir=".">
+    		<fileset includes="*.msi"/>
+		</delete>
     </target>
 
 	<!-- ================================= 
