@@ -15,10 +15,8 @@
 	
 	<property name="advinst.base" location="/home/user/AdvancedInstaller"/>
 
-	<property name="ostc.download.base" value="http://download.openscada.org/othala"/>
-	<property name="ostc.download.buildType" value="I"/>
-	<property name="ostc.download.buildId" value="${version}"/>
-	<property name="ostc.download.uri" value="${ostc.download.base}/${ostc.download.buildType}/${ostc.download.buildId}"/>
+	<property name="ostc.download.32" value="ostc-win32.win32.x86.zip"/>
+	<property name="ostc.download.64" value="ostc-win32.win32.x86_64.zip"/>
 	
 	<property name="output.dir=" location="${java.io.tmpdir}/deploy-msi"/>
 	
@@ -56,11 +54,11 @@
     <target name="download" depends="" description="Download the source package">
         <mkdir dir="download"/>
 
-        <get src="${ostc.download.uri}/ostc-win32.win32.x86.zip" dest="download/ostc-win32.win32.x86.zip"/>
+        <get src="${ostc.download.32}" dest="download/ostc-win32.win32.x86.zip"/>
         <mkdir dir="unpack/win32.win32.x86/ostc"/>
     	<unzip dest="unpack/win32.win32.x86/ostc" src="download/ostc-win32.win32.x86.zip"/>
         
-        <get src="${ostc.download.uri}/ostc-win32.win32.x86_64.zip" dest="download/ostc-win32.win32.x86_64.zip"/>
+        <get src="${ostc.download.64}" dest="download/ostc-win32.win32.x86_64.zip"/>
         <mkdir dir="unpack/win32.win32.x86_64/ostc"/>
     	<unzip dest="unpack/win32.win32.x86_64/ostc" src="download/ostc-win32.win32.x86_64.zip"/>
 
