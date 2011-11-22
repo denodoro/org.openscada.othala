@@ -18,7 +18,7 @@
 
 	<property name="ostc.download.base" value="http://download.openscada.org/othala"/>
 	<property name="ostc.download.buildType" value="I"/>
-	<property name="ostc.download.buildId" value="0.16.0"/>
+	<property name="ostc.download.buildId" value="${version}"/>
 	<property name="ostc.download.uri" value="${ostc.download.base}/${ostc.download.buildType}/${ostc.download.buildId}/ostc"/>
 	
 	<property name="deploy.base" location="${java.io.tmpdir}/deploy-msi"/>
