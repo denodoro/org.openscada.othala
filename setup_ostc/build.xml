@@ -20,20 +20,35 @@
 	<property name="ostc.download.buildId" value="${version}"/>
 	<property name="ostc.download.uri" value="${ostc.download.base}/${ostc.download.buildType}/${ostc.download.buildId}"/>
 	
-	<property name="deploy.base" location="${java.io.tmpdir}/deploy-msi"/>
+	<property name="output.dir=" location="${java.io.tmpdir}/deploy-msi"/>
 	
 	<!-- ================================= 
           target: default              
          ================================= -->
-    <target name="default" depends="init,clean,download,build,genUpdate" description="Build the setup">
+    <target name="default" depends="init,clean,download,build,genUpdate,deploy" description="Build the setup">
     </target>
-	
+
 	<!-- ================================= 
           target: init              
          ================================= -->
     <target name="init" depends="" description="Initialize">
         <echo message="Building: ${version}"/>
     </target>
+	
+	<!-- ================================= 
+          target: deploy              
+         ================================= -->
+    <target name="deploy">
+    	<delete dir="${output.dir}"/>
+    	<mkdir dir="${output.dir}"/>
+    	
+        <copy todir="${output.dir}">
+        	<fileset dir=".">
+        		<include name="*.msi"/>
+        	</fileset>
+    	</copy>
+    </target>
+
 	
 	<!-- ================================= 
           target: download              
