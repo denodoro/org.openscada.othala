@@ -72,8 +72,8 @@
     	<delete dir="download" failonerror="false"/>
         <delete dir="unpack" failonerror="false"/>
     	
-    	<delete dir=".">
-    		<fileset includes="*.msi"/>
+    	<delete>
+    		<fileset dir="." includes="*.msi"/>
 		</delete>
     </target>
 
