@@ -1,1 +1,0 @@
-c:\cygwin\bin\bash --login -c "%1/genUpdate %2 %3"  

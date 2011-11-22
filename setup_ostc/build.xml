@@ -23,7 +23,7 @@
 	<!-- ================================= 
           target: default              
          ================================= -->
-    <target name="default" depends="init,clean,download,build,genUpdate,deploy" description="Build the setup">
+    <target name="default" depends="init,clean,download,build,deploy" description="Build the setup">
     </target>
 
 	<!-- ================================= 
@@ -45,6 +45,8 @@
         		<include name="*.msi"/>
         	</fileset>
     	</copy>
+    	
+    	<echo message="${version}" output="${output.dir}/version.properties" append="fale"/>
     </target>
 
 	
@@ -99,27 +101,4 @@
     	</exec>
     </target>
     
-    <!-- ================================= 
-      target: genUpdate              
-     ================================= -->
-     <target name="genUpdate" description="Generate update file" if="enable.genUpdate">
-        <makeUpdate file="ostc_${version}_win32.win32.x86.msi" version="${version}"/>
-     </target>
-     	
- 	<!-- = = = = = = = = = = = = = = = = =
-      macrodef: makeUpdate          
-     = = = = = = = = = = = = = = = = = -->
-    <macrodef name="makeUpdate">
-        <attribute name="file" />
-    	<attribute name="version" />
-        <sequential>
-        	<echo message="${basedir}" />
-			<exec failonerror="true" executable="${basedir}/genUpdate.bat" dir="${basedir}">
-				<arg file="${basedir}"/>
-				<arg file="@{file}"/>
-				<arg value="@{version}"/>
-			</exec>
-        </sequential>
-    </macrodef>
-	
 </project>
