@@ -34,7 +34,7 @@
          point="org.eclipse.core.runtime.products">
       <product
             application="org.openscada.othala.application.application"
-            name="OpenSCADA Admin Client">
+            name="openSCADA Admin Client">
          <property
                name="aboutImage"
                value="branding/about.png"/>
@@ -55,7 +55,7 @@
                value="OpenSCADA Project"/>
          <property
                name="appName"
-               value="OpenSCADA Admin Client">
+               value="openSCADA Admin Client">
          </property>
          <property
                name="startupForegroundColor"
