@@ -6,7 +6,7 @@
      ====================================================================== -->
 <project name="ostc_setup" default="default" basedir=".">
     <description>
-    	openSCADA Adim Client Setup
+    	openSCADA Admin Client Setup
     </description>
 	
 	<!-- properties -->
