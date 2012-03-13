@@ -14,7 +14,7 @@
     <ROW Property="Manufacturer" Value="TH4 SYSTEMS GmbH" ValueLocId="*"/>
     <ROW Property="ProductCode" Value="1033:{1F37A47C-24CE-4B8B-8246-0EC10224FDA6} 1031:{19D302D6-597E-4737-9130-99D0ADE829E4} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="OpenSCADA Administration Client" ValueLocId="*"/>
+    <ROW Property="ProductName" Value="openSCADA Administration Client" ValueLocId="*"/>
     <ROW Property="ProductVersion" Value="0.1.0"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{E9E0989E-351C-4797-87AD-D646E7A97FF0}"/>
