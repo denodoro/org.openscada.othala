@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="openSCADA Admin Client" uid="org.openscada.othala.app" id="org.openscada.othala.application.product" application="org.openscada.othala.application.application" version="0.18.0" useFeatures="true" includeLaunchers="true">
+<product name="openSCADA Admin Client" uid="org.openscada.othala.app" id="org.openscada.othala.application.product" application="org.openscada.othala.application.application" version="1.0.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="branding/about.png"/>
@@ -44,7 +44,7 @@
    </plugins>
 
    <features>
-      <feature id="org.openscada.othala" version="0.18.0.qualifier"/>
+      <feature id="org.openscada.othala" version="1.0.0.qualifier"/>
    </features>
 
 
