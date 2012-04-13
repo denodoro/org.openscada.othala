@@ -139,6 +139,12 @@
   <!-- Steps to do before running the build.xmls for the elements being built. -->
   <!-- ===================================================================== -->
   <target name="preProcess">
+	<property file="${buildDirectory}/finalPluginsVersions.properties"/>
+  	<echo message="Setting about versions: ${org.openscada.othala.application}"/>
+  	<replace dir="${buildDirectory}/plugins" value="${org.openscada.othala.application}">
+  		<include name="**/about.mappings"/>
+  		<replacetoken>@@VERSION@@</replacetoken>
+  	</replace>
   </target>
 
   <!-- ===================================================================== -->
