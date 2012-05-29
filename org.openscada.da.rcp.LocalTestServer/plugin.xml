@@ -37,7 +37,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="org.openscada.da.rcp.LocalTestServer.preferences.StylesPreferencePage"
+            class="org.openscada.da.rcp.LocalTestServer.preferences.PreferencePage"
             id="org.openscada.da.rcp.LocalTestServer.preferences.StylesPreferencePage"
             name="Testing Server Preferences">
       </page>

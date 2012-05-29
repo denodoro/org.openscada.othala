@@ -25,10 +25,10 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.openscada.da.rcp.LocalTestServer.Activator;
 
-public class StylesPreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage
+public class PreferencePage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage
 {
 
-    public StylesPreferencePage ()
+    public PreferencePage ()
     {
         super ( FieldEditorPreferencePage.GRID );
         setPreferenceStore ( Activator.getDefault ().getPreferenceStore () );
