@@ -19,8 +19,8 @@
 
 package org.openscada.da.rcp.LocalTestServer;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.eclipse.core.commands.operations.OperationStatus;
 import org.eclipse.core.runtime.IStatus;
@@ -31,7 +31,6 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.openscada.core.ConnectionInformation;
 import org.openscada.da.core.server.Hive;
 import org.openscada.da.rcp.LocalTestServer.preferences.PreferenceConstants;
-import org.openscada.da.server.net.Exporter;
 import org.osgi.framework.BundleContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,14 +48,7 @@ public class Activator extends AbstractUIPlugin
     // The shared instance
     private static Activator plugin;
 
-    class Server
-    {
-        Exporter exporter = null;
-
-        Exporter exporter2 = null;
-    }
-
-    private final Map<Integer, Server> exportMap = new HashMap<Integer, Server> ();
+    private ServerManager serverManager;
 
     /**
      * The constructor
@@ -73,6 +65,8 @@ public class Activator extends AbstractUIPlugin
     @Override
     public void start ( final BundleContext context ) throws Exception
     {
+        this.serverManager = new ServerManager ();
+
         super.start ( context );
     }
 
@@ -83,13 +77,20 @@ public class Activator extends AbstractUIPlugin
     @Override
     public void stop ( final BundleContext context ) throws Exception
     {
+        this.serverManager.dispose ();
+
         plugin = null;
         super.stop ( context );
     }
 
+    public ServerManager getServerManager ()
+    {
+        return this.serverManager;
+    }
+
     /**
      * Returns the shared instance
-     *
+     * 
      * @return the shared instance
      */
     public static Activator getDefault ()
@@ -98,10 +99,10 @@ public class Activator extends AbstractUIPlugin
     }
 
     /**
-     * Returns an image descriptor for the image file at the given
-     * plug-in relative path
-     *
-     * @param path the path
+     * Returns an image descriptor for the image file at the given plug-in relative path
+     * 
+     * @param path
+     *            the path
      * @return the image descriptor
      */
     public static ImageDescriptor getImageDescriptor ( final String path )
@@ -116,51 +117,34 @@ public class Activator extends AbstractUIPlugin
 
     public void startLocalServer () throws Exception
     {
-        synchronized ( this )
-        {
-            checkRunning ( getPort ( PreferenceConstants.P_PORT_TEST ) );
-            final org.openscada.da.server.test.Hive testHive = new org.openscada.da.server.test.Hive ();
-            testHive.start ();
+        final org.openscada.da.server.test.Hive testHive = new org.openscada.da.server.test.Hive ();
 
-            try
-            {
-                exportServer ( testHive, getPort ( PreferenceConstants.P_PORT_TEST ) );
-            }
-            catch ( final Throwable e )
-            {
-                logger.error ( "failed to start", e );
-                notifyServerError ( e );
-            }
+        try
+        {
+            exportServer ( testHive, getPort ( PreferenceConstants.P_PORT_TEST ), "Local test server" );
         }
+        catch ( final Throwable e )
+        {
+            logger.error ( "failed to start", e );
+            notifyServerError ( e );
+        }
+
     }
 
     public void startLocalSimServer () throws Exception
     {
-        synchronized ( this )
-        {
-            checkRunning ( getPort ( PreferenceConstants.P_PORT_SIM ) );
-            final org.openscada.da.core.server.Hive hive = new org.openscada.da.server.simulation.component.Hive ();
-            hive.start ();
-            exportServer ( hive, getPort ( PreferenceConstants.P_PORT_SIM ) );
-        }
+        final org.openscada.da.core.server.Hive hive = new org.openscada.da.server.simulation.component.Hive ();
+        exportServer ( hive, getPort ( PreferenceConstants.P_PORT_SIM ), "Local simulation server" );
     }
 
-    private void checkRunning ( final int port ) throws AlreadyStartedException
+    private void exportServer ( final Hive hive, final int port, final String description ) throws Exception
     {
-        if ( this.exportMap.containsKey ( port ) )
-        {
-            throw new AlreadyStartedException ();
-        }
-    }
+        final List<ConnectionInformation> endpoints = new LinkedList<ConnectionInformation> ();
 
-    private void exportServer ( final Hive hive, final int port ) throws Exception
-    {
-        final Server server = new Server ();
-        server.exporter = new Exporter ( hive, ConnectionInformation.fromURI ( "da:net://0.0.0.0:" + port ) );
-        server.exporter.start ();
-        server.exporter2 = new Exporter ( hive, ConnectionInformation.fromURI ( "da:net://0.0.0.0:" + port + "?socketImpl=VMPIPE" ) );
-        server.exporter2.start ();
-        this.exportMap.put ( port, server );
+        endpoints.add ( ConnectionInformation.fromURI ( "da:net://0.0.0.0:" + port ) );
+        endpoints.add ( ConnectionInformation.fromURI ( "da:net://0.0.0.0:" + port + "?socketImpl=VMPIPE" ) );
+
+        this.serverManager.startServer ( hive, endpoints, description );
     }
 
     private void notifyServerError ( final Throwable t )
@@ -172,6 +156,7 @@ public class Activator extends AbstractUIPlugin
         {
             shell.getDisplay ().asyncExec ( new Runnable () {
 
+                @Override
                 public void run ()
                 {
                     if ( !shell.isDisposed () )
