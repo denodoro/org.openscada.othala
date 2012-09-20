@@ -5,10 +5,10 @@
     alt-style="css/swt.properties" style="css/whatsnew.css"
     path="whatsnew/@">
     <group style-id="content-group" id="content-group">
-      <link label="New perspectives"
+      <link label="Perspectives"
         url="http://org.eclipse.ui.intro/showPage?id=perspectivesOverviewNew"
         style-id="content-link" id="ostc">
-        <text>Explaining the new perspectives</text>
+        <text>Explaining the perspectives</text>
       </link>
     </group>
   </extensionContent>
@@ -25,7 +25,7 @@
         PERSPECTIVE OVERVIEW
       </text>
       <text style-id="page-description" id="page-description">
-        Explaining the new perspectives
+        Explaining the perspectives
       </text>
       <html src="html/perspectivesOverview.html" type="inline"></html>
     </group>
