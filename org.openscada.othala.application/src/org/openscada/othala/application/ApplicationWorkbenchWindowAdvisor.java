@@ -33,11 +33,13 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor
         super ( configurer );
     }
 
+    @Override
     public ActionBarAdvisor createActionBarAdvisor ( final IActionBarConfigurer configurer )
     {
         return new ApplicationActionBarAdvisor ( configurer );
     }
 
+    @Override
     public void preWindowOpen ()
     {
         final IWorkbenchWindowConfigurer configurer = getWindowConfigurer ();
@@ -46,5 +48,6 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor
         configurer.setShowStatusLine ( true );
         configurer.setShowProgressIndicator ( true );
         configurer.setShowPerspectiveBar ( true );
+        configurer.setTitle ( "openSCADA Admin Client" );
     }
 }
