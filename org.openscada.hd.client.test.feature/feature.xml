@@ -37,7 +37,6 @@
       <import plugin="org.eclipse.core.databinding" version="1.2.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.databinding.beans" version="1.2.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.jface.databinding" version="1.3.0" match="greaterOrEqual"/>
-      <import plugin="org.openscada.hd.ui.chart" version="0.6.0" match="greaterOrEqual"/>
       <import plugin="org.openscada.core.ui.connection" version="0.14.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.navigator" version="3.4.0" match="greaterOrEqual"/>
       <import plugin="org.openscada.utils" version="0.14.0" match="greaterOrEqual"/>
@@ -92,13 +91,6 @@
 
    <plugin
          id="org.openscada.hd.net"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.openscada.hd.ui.chart"
          download-size="0"
          install-size="0"
          version="0.0.0"
