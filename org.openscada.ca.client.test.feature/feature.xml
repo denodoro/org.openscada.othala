@@ -21,14 +21,12 @@
       <import plugin="org.openscada.utils"/>
       <import plugin="org.openscada.utils.propertyeditors"/>
       <import plugin="org.openscada.core.client"/>
-      <import plugin="org.openscada.core"/>
-      <import plugin="slf4j.api"/>
       <import plugin="org.eclipse.osgi"/>
+      <import plugin="slf4j.api"/>
       <import plugin="org.openscada.core.connection.provider"/>
-      <import plugin="org.openscada.utils.osgi"/>
-      <import plugin="org.openscada.utils.osgi.jaxws"/>
       <import plugin="org.eclipse.ui" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.runtime" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.openscada.core"/>
       <import plugin="org.eclipse.ui.navigator" version="3.4.0" match="greaterOrEqual"/>
       <import plugin="org.openscada.ui.databinding" version="0.15.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.core.databinding" version="1.2.0" match="greaterOrEqual"/>
@@ -42,9 +40,6 @@
       <import plugin="org.openscada.core.client" version="0.14.0" match="greaterOrEqual"/>
       <import plugin="org.openscada.ca" version="0.15.0" match="greaterOrEqual"/>
       <import plugin="org.openscada.ui.utils"/>
-      <import plugin="org.openscada.core.ui.connection.creator" version="0.14.0" match="greaterOrEqual"/>
-      <import plugin="org.openscada.ca.client.jaxws" version="0.15.0" match="greaterOrEqual"/>
-      <import plugin="org.openscada.ca.connection.provider" version="0.15.0" match="greaterOrEqual"/>
       <import plugin="com.google.guava"/>
    </requires>
 
